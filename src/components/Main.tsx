@@ -1,10 +1,25 @@
 import React from "react";
 import "./Main.scss";
+import Drawer from './Drawer/Drawer';
 import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
 
 const Main: React.FC = () => {
   return (
     <main>
+       <Drawer side="left">
+        <h2>Skills</h2>
+        <ul>
+          <li>React</li>
+          <li>TypeScript</li>
+        </ul>
+      </Drawer>
+      <Drawer side="right">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Photography</li>
+          <li>Hiking</li>
+        </ul>
+      </Drawer>
       <h2 className="header">Hey ! </h2>
       <p className="presentation-text">
         I'm Thomas, a young and passionate full-stack engineer
