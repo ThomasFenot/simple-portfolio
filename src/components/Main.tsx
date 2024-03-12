@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import "./Main.scss";
-import Drawer from './Drawer/Drawer';
 import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
+
+import Drawer from './Drawer/Drawer';
+import TextButton from './TextButton/TextButton';
+
+import "./Main.scss";
 
 const Main: React.FC = () => {
   const [isLeftOpen, setIsLeftOpen] = useState(false);
   const [isRightOpen, setIsRightOpen] = useState(false);
-
 
   const toggleLeftDrawer = () => {
     setIsLeftOpen(!isLeftOpen);
@@ -18,27 +20,24 @@ const Main: React.FC = () => {
 
   return (
     <main>
-      <button onClick={toggleLeftDrawer}>Toggle left Drawer</button>
-      <button onClick={toggleRightDrawer}>Toggle right Drawer</button>
-
        <Drawer side="left" isOpen = {isLeftOpen}>
-        <h2>Skills</h2>
+        <h2 className="drawer-header">Skills</h2>
         <ul>
           <li>React</li>
           <li>TypeScript</li>
         </ul>
       </Drawer>
       <Drawer side="right" isOpen = {isRightOpen}>
-        <h2>Hobbies</h2>
+        <h2 className="drawer-header">Hobbies</h2>
         <ul>
           <li>Photography</li>
           <li>Hiking</li>
         </ul>
       </Drawer>
-      <h2 className="header">Hey ! </h2>
-      <p className="presentation-text">
-        I'm Thomas, a young and passionate <button onClick={toggleLeftDrawer}> full-stack engineer</button>
-      </p>
+      <h2 className="header">Hey !</h2>
+      <div className="presentation-text">
+        I'm<i> Thomas Fenot</i>, a young and passionate <TextButton onClickAction={toggleLeftDrawer} value='full-stack engineer'/> and <TextButton onClickAction={toggleRightDrawer} value='much more.'/>
+      </div>
       <h2 className="icon-container">
         <a href="https://github.com/ThomasFenot " target="_blank" rel="noopener noreferrer" className="icon-link">
           <AiFillGithub />

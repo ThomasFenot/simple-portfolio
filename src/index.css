@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'Nunito Variable', sans-serif;
   font-weight: 900;
+  color: rgb(25, 26, 26);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

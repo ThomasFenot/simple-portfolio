@@ -1,14 +1,16 @@
+import  { MouseEventHandler } from 'react';
+
 import "./TextButton.scss";
 
-interface TextButton{
+interface TextButtonProps{
     value: string;
+    onClickAction: MouseEventHandler;
 };
 
-const TextButton: React.FC<TextButton> = ({value}) => {
-
+const TextButton: React.FC<TextButtonProps> = ({value, onClickAction}) => {
     return(
         <div>
-            <button >{value}</button>
+            <button onClick={onClickAction} className="textButton">{value}</button>
         </div>
     );
 };
