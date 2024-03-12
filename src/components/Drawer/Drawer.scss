@@ -1,24 +1,38 @@
 .drawer {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 250px;
+    top: 2vh;
+    bottom: 2vh;
+    width: 25vh;
     background-color: #f0f0f0;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
     overflow-y: auto;
     transition: transform 0.3s ease-out;
-    transform: translateX(-100%);
    }
    
    .drawer.left {
     left: 0;
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    transform: translateX(-100%);
    }
    
    .drawer.right {
     right: 0;
+    border-top-left-radius: 3vh;
+    border-bottom-left-radius: 3vh;
+    transform: translateX(100%);
+   }
+
+   .drawer.right.open {
+    transform: translateX(0);
+    animation: bounceInRight;
+    animation-duration: 1s;
    }
    
-   .drawer.open {
+   .drawer.left.open {
     transform: translateX(0);
+    animation: bounceInLeft;
+    animation-duration: 1s;
    }
    
    .drawer-content {

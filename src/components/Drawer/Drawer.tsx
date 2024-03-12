@@ -1,21 +1,15 @@
-import React, { useState } from 'react';
 import './Drawer.scss';
+import 'animate.css';
 
 interface DrawerProps {
  side: 'left' | 'right';
  children: React.ReactNode;
+ isOpen: boolean;
 }
 
-const Drawer: React.FC<DrawerProps> = ({ side, children }) => {
- const [isOpen, setIsOpen] = useState(false);
-
- const toggleDrawer = () => {
-    setIsOpen(!isOpen);
- };
-
+const Drawer: React.FC<DrawerProps> = ({ side, children , isOpen}) => {
  return (
     <div className={`drawer ${side} ${isOpen ? 'open' : ''}`}>
-      <button onClick={toggleDrawer}>Toggle Drawer</button>
       <div className="drawer-content">
         {children}
       </div>
