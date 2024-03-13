@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
 import { RiFileMusicFill } from "react-icons/ri";
 
 import Drawer from './Drawer/Drawer';
 import TextButton from './TextButton/TextButton';
+import TextWheel from './TextWheel/TextWheel';
+
 
 import "./Main.scss";
 
@@ -40,9 +42,12 @@ const Main: React.FC = () => {
         </ul>
       </Drawer>
       <h2 className="header">Hey !</h2>
-      <div className="presentation-text">
+      {/* <div className="presentation-text">
         I'm<i> Thomas Fenot</i>, a young and passionate <TextButton onClickAction={toggleLeftDrawer} value='full-stack engineer'/> and <TextButton onClickAction={toggleRightDrawer} value='much more.'/>
-      </div>
+      </div> */}
+      
+      <TextWheel/>
+  
       <h2 className="icon-container">
         <a href="https://github.com/ThomasFenot " target="_blank" rel="noopener noreferrer" className="icon-link">
           <AiFillGithub />
