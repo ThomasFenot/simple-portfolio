@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AiFillGithub, AiFillMail, AiFillLinkedin } from "react-icons/ai";
+import { RiFileMusicFill } from "react-icons/ri";
 
 import Drawer from './Drawer/Drawer';
 import TextButton from './TextButton/TextButton';
@@ -25,13 +26,17 @@ const Main: React.FC = () => {
         <ul>
           <li>React</li>
           <li>TypeScript</li>
+          <li>.Net</li>
+          <li>Sql</li>
+          <li>EF</li>
+          <li>C#</li>
         </ul>
       </Drawer>
       <Drawer side="right" isOpen = {isRightOpen}>
         <h2 className="drawer-header">Hobbies</h2>
         <ul>
-          <li>Photography</li>
-          <li>Hiking</li>
+          <li>Music</li>
+          <li>Speleology</li>
         </ul>
       </Drawer>
       <h2 className="header">Hey !</h2>
