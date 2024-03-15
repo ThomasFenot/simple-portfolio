@@ -6,18 +6,12 @@ import Drawer from './Drawer/Drawer';
 import TextButton from './TextButton/TextButton';
 
 import "./Main.scss";
+import TextWheel from './TextWheel/TextWheel';
 
 const Main: React.FC = () => {
   const [isLeftOpen, setIsLeftOpen] = useState(false);
   const [isRightOpen, setIsRightOpen] = useState(false);
 
-  const toggleLeftDrawer = () => {
-    setIsLeftOpen(!isLeftOpen);
-  };
-
-  const toggleRightDrawer = () => {
-    setIsRightOpen(!isRightOpen);
-  };
 
   return (
     <main>
@@ -41,7 +35,8 @@ const Main: React.FC = () => {
       </Drawer>
       <h2 className="header">Hey !</h2>
       <div className="presentation-text">
-        I'm<i> Thomas Fenot</i>, a young and passionate <TextButton onClickAction={toggleLeftDrawer} value='full-stack engineer'/> and <TextButton onClickAction={toggleRightDrawer} value='much more.'/>
+         I'm<i> Thomas Fenot, </i>
+        <TextWheel/>
       </div>
       <h2 className="icon-container">
         <a href="https://github.com/ThomasFenot " target="_blank" rel="noopener noreferrer" className="icon-link">
