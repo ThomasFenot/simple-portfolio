@@ -9,9 +9,8 @@ import "./Main.scss";
 import TextWheel from './TextWheel/TextWheel';
 
 const Main: React.FC = () => {
-  const [isLeftOpen, setIsLeftOpen] = useState(false);
-  const [isRightOpen, setIsRightOpen] = useState(false);
-
+  const [isLeftOpen, setIsLeftOpen] = useState<boolean>(false);
+  const [isRightOpen, setIsRightOpen] = useState<boolean>(false);
 
   return (
     <main>
@@ -36,7 +35,7 @@ const Main: React.FC = () => {
       <h2 className="header">Hey !</h2>
       <div className="presentation-text">
          I'm<i> Thomas Fenot, </i>
-        <TextWheel/>
+        <TextWheel setIsLeftOpen={setIsLeftOpen} setIsRightOpen={setIsRightOpen}/>
       </div>
       <h2 className="icon-container">
         <a href="https://github.com/ThomasFenot " target="_blank" rel="noopener noreferrer" className="icon-link">

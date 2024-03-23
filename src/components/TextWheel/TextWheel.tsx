@@ -4,9 +4,15 @@ import TextButton from "../TextButton/TextButton";
 
 import "./TextWheel.scss";
 
-const TextWheel: FC = () => {
-  const [isLeftOpen, setIsLeftOpen] = useState(false);
-  const [isRightOpen, setIsRightOpen] = useState(false);
+interface TextWheelProps {
+  setIsLeftOpen: (value: boolean) => void;
+  setIsRightOpen: (value: boolean) => void;
+}
+
+const TextWheel: FC<TextWheelProps> = ({setIsLeftOpen, setIsRightOpen}) => {
+  const isLeftOpen = Boolean;
+  const isRightOpen = Boolean;
+
 
   const toggleLeftDrawer = () => {
     setIsLeftOpen(!isLeftOpen);
