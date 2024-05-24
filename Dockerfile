@@ -1,11 +1,8 @@
-FROM node:latest as builder
+FROM node:18.18 as build-deps
 WORKDIR /app
 COPY package.json ./
 COPY yarn.lock ./
 RUN yarn install --frozen-lockfile
 COPY . .
-RUN yarn build
-
-FROM nginx:latest as Server
-COPY ./etc/nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder ./app/build /usr/share/nginx/html
+EXPOSE 3000
+CMD ["npm", "start"]
