@@ -1,0 +1,23 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(300deg, whitesmoke,#d8d8df, #f0ebe8);
+  background-size: 400% 400%;
+  animation: gradient-animation 25s ease infinite;
+ }
+ 
+ @keyframes gradient-animation {
+   0% {
+     background-position: 0% 50%;
+  }
+   50% {
+     background-position: 100% 50%;
+  }
+   100% {
+     background-position: 0% 50%;
+  }
+ }
+ 
